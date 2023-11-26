@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/card_gradient" >
+
+        <TextView
+            android:id="@+id/text_Nama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsemibold"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/text_Isi"
+            app:layout_constraintEnd_toStartOf="@+id/icon_edit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.214"
+            tools:text="Nanti kita cerita hari ini" />
+
+        <TextView
+            android:id="@+id/text_Judul"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            android:textSize="14sp"
+            android:paddingTop="2dp"
+            android:paddingBottom="4dp"
+            android:textColor="#001845"
+            app:layout_constraintBottom_toTopOf="@+id/text_Isi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_Nama"
+            tools:text="Your Title Here" />
+
+        <TextView
+            android:id="@+id/text_Isi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Your Content Here"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="5dp"
+            android:textSize="14sp"
+            android:paddingBottom="6dp"
+            android:textColor="#3C096C"
+            app:layout_constraintTop_toBottomOf="@+id/text_Judul"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_edit"
+            android:layout_width="42dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="12dp"
+            android:padding="10dp"
+            android:src="@drawable/baseline_edit_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/icon_delete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#3D348B" />
+
+        <ImageView
+            android:id="@+id/icon_delete"
+            android:layout_width="45dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:padding="10dp"
+            android:src="@drawable/baseline_delete_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/red" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
